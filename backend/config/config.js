@@ -6,7 +6,9 @@ module.exports = {
         TOKEN_COOKIE_NAME: 'quiz_token'
     },
     production: {
-        PORT: 5000,
-        DB_CONNECTION_STRING: ''
+        PORT: process.env.PORT || 3000,
+        DB_CONNECTION_STRING: '',
+        JWT_SECRET: '$2y$10$xzlJAyCJAfoaBZIez.I0EO3KZAuXr66Voh/YmIQrGnjKUN3/WOJSq',
+        TOKEN_COOKIE_NAME: 'quiz_token'
     }
 }
