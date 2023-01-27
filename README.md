@@ -1,11 +1,17 @@
-# starter-express-api
+# Quiz-fever Rest Server
+     
+## Overview 
 
-This is the simplest possible nodejs api using express that responds to any request with: 
-```
-Yo!
-```
+This is RESTful Express server created for Quiz-Fever SPA (Check the link for more information: https://github.com/js-quiz-app/js-quiz-app.github.io). 
 
-### Deploy it in 7 seconds: 
+## Usage
 
-[![Deploy to Cyclic](https://deploy.cyclic.app/button.svg)](https://deploy.cyclic.app/)
+To run the app, first install the necessary dependencies:
 
+`npm install`
+
+Then, start the server with one step using:
+
+`npm start`
+
+The server is listening now on: http:localhost:3030.
