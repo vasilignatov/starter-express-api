@@ -3,13 +3,13 @@ const userService = require('../services/user-service');
 const { COOKIE_NAME } = require('../constants');
 
 router.post('/register', async (req, res) => {
-    const {  email,  password } = req.body;
+    const { username, email, password } = req.body;
 
     try {
         await userService.register({ username, email, password });
 
         let { user, token } = await userService.login({ username, password });
-        
+
         res.cookie(COOKIE_NAME, token);
 
         res.json({

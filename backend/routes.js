@@ -4,8 +4,9 @@ const quizController = require('./controllers/quiz-controller');
 const questionController = require('./controllers/question-controller');
 const solutionController = require('./controllers/solution-controller');
 
-router.get('*', (req, res) => {
+router.use((req, res, next) => {
     console.log(req.url);
+    next();
     // res.send('<h1>It`s working!</h1>');
 });
 
