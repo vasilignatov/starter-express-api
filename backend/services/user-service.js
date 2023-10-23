@@ -1,6 +1,6 @@
 const User = require('../models/User');
 const jwt = require('../utils/jwtUtils');
-const { JWT_SECRET } = require('../constants');
+const { JWT_SECRET } = require('../config/config')[process.env.NODE_ENV];
 
 exports.register = ({ username, email, password }) => User.create({ username, email, password });
 

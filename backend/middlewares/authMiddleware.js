@@ -1,5 +1,5 @@
 const jwt = require('../utils/jwtUtils');
-const { JWT_SECRET } = require('../constants');
+const { JWT_SECRET } = require('../config/config')[process.env.NODE_ENV];
 
 exports.auth = async function (req, res, next) {
     let token = req.headers['x-parse-session-token'];

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const userService = require('../services/user-service');
-const { COOKIE_NAME } = require('../constants');
+const { COOKIE_NAME } = require('../config/config')[process.env.NODE_ENV];
 
 router.post('/register', async (req, res) => {
     const { username, email, password } = req.body;

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const { SALT_ROUNDS } = require('../constants');
+const { SALT_ROUNDS } = require('../config/config')[process.env.NODE_ENV];
 
 const userSchema = new mongoose.Schema({
     username: {
